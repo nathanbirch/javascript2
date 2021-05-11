@@ -1,7 +1,8 @@
-window.onload = function () {
-  // create an HTML header
-  const heading = document.createElement('h1');
-  const heading_text = document.createTextNode('Big Head!');
-  heading.appendChild(heading_text);
-  document.body.appendChild(heading);
-};
+import * as circleCalculator from './circleCalculator.js';
+
+let radius = parseFloat(prompt('Please enter a radius: '));
+
+let area = circleCalculator.computeCircleArea(radius);
+let circumference = circleCalculator.computeCircleCircumference(radius);
+
+console.log(`The circumference is ${circumference} and the area is ${area}.`);
